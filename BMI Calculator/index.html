@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BMI Calculator - Tania</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>BMI Calculator - Tania Cresentia</h1>
+        </header>
+        <main>
+            <div class="main-container">
+                <!-- the left side -->
+                <div class="calculator-container">
+                    <div class="container-header">
+                        <h2>Calculator Form</h2>
+                    </div>
+                    <p>Everyone dreams of having an ideal body weight, which not only enhances appearance but also signifies good health. What about you? Let's calculate it using the BMI calculator.</p>
+                    <div class="form-container">
+                        <form id="bmi-form" action="" method="post">
+                            <label class="form-variable">Gender</label><br>
+                            <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+                            <br>
+                            <span id="gender_error"></span>
+                            <br>    
+                            
+                            <label class="form-variable">Body Weight (kg)</label><br>
+                            <input type="number" id="weight" name="" value="" placeholder="input weight">
+                            <br>
+                            <span id="weight_error"></span>
+                            <br>
+
+                            <label class="form-variable">Age (years old)</label><br>
+                            <input type="number" id="age" name="" value="" placeholder="input age">
+                            <br>
+                            <span id="age_error"></span>
+                            <br>
+
+                            <label class="form-variable">Body Height (cm)</label><br>
+                            <input type="number" id="height" name="" value="" placeholder="input height"> 
+                            <br>
+                            <span id="height_error"></span>
+                            <br><br>
+
+                            <button id="bmi-btn">Calculate BMI</button>
+                            <button id="reset-btn" onclick="document.getElementById('bmi-form').reset()">Reset</button>
+                            <!-- <input type="submit" id="calculate-bmi" value="Calculate BMI"> -->
+                            <!-- <input type="reset"> -->
+                        </form>
+                    </div>
+
+                    <h3>Features Highlights</h3>
+                    <li>Calculate body weight</li>
+                    <li>Determine ideal body category</li>
+                    <li>Healthy diet recommendation</li>
+
+                    <p>This tool is designed for adult use only (pregnant or breastfeeding women should not use this BMI reading as reference) and any decision based on its result should be made after consulting with a qualified individual such as a doctor.</p>
+                    <p>The calculator offers an insight into how your weight stands against general standards. Body Mass Index (BMI) is derived by dividing your weight (in kilograms) by the square of your height (in meters), represented as BMI = Kg/m^2.</p>
+
+                </div>
+
+                <!-- the right side -->
+                <div class="result-container">
+                    <div class="container-header">
+                        <h2>Result</h2>
+                    </div>
+                    <div class="bmi-result">
+                        <p id="bmi-status">BMI Status</p>
+                        <p id="bmi-value">BMI Value</p>
+                        <!-- <button>Download Hasil BMI</button> -->
+                    </div>
+                    <div> 
+                        <p class="plan">Diet Plan:</p>
+                        <p id="diet">(Input BMI first)</p>
+                        <p class="plan">Workout Plan:</p>
+                        <p id ="workout">(Input BMI first)</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
